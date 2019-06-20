@@ -91,7 +91,8 @@ func dealExecelData(){
 					t1 , _ := strconv.ParseFloat(arr[0], 32)
 					t2 , _ := strconv.ParseFloat(arr[1], 32)
 					floatValue += t2 - t1
-					expresssStr += strconv.FormatFloat(floatValue,'f',-1,64)
+					thiswidth := t2 - t1
+					expresssStr += strconv.FormatFloat(thiswidth,'f',-1,64)
 					if(j != len(arrayResult) - 1){
 						expresssStr += "+"
 					}
@@ -120,7 +121,7 @@ func main() {
     
 
 	fmt.Println("欢迎使用本工具，请注意以下几点：") 
-	fmt.Println("作者：陈日红(mail.chenrh.com)，版本 v1.1")
+	fmt.Println("作者：陈日红(mail@chenrh.com)，版本 v1.2")
 	fmt.Println("1.本工具仅支持 .xlsx 的文件")
 	fmt.Println("2.请将待处理的文件命名为 整理品规.xlsx")
 	fmt.Println("3.请把本工具拷贝至 整理品规.xlsx 目录")
